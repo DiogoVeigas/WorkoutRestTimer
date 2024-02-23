@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Workout Rest Timer",
+    "description": "Power your workouts you well timed rests.",
+    "slug": "rest-workout-timer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/iconsAndSpashes/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/iconsAndSpashes/splash-black.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/iconsAndSpashes/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.diogoveigas.restworkouttimer"
+    },
+    "web": {
+      "favicon": "./src/assets/defaultIcons/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./src/assets/iconsAndSpashes/icon.png",
+          "color": "#ededed",
+          "sounds": [
+            "./src/assets/sounds/beeps/level_up_notification.mp3"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9eb8319e-86fa-4706-be2a-55d9150656ea"
+      }
+    }
+  }
+}
